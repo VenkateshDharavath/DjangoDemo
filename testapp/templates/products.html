@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div style="border: 1px solid black; padding: 10px; margin: auto">
+    <h1>This is a products page</h1></h1>
+    {% for product in products %}
+        <p>This is product <a href="{% url 'product' product.id %}">{{product}}</a> </p>
+        {% comment %} href="/product/{{product}}" {% endcomment %}
+    {% endfor %}
+</div>
+{% endblock content %}
+
